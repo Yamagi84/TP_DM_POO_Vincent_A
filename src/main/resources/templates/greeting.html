@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Blog</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style th:fragment="style">
+            ul.nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            li.nav {
+                float: left;
+            }
+
+            a.nav {
+                display: block;
+                padding: 8px;
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <nav th:fragment="navigation">
+            <ul class="nav">
+                <li class="nav">
+                    <a class="nav" href="/greeting">greeting</a>
+                </li>
+                <li class="nav">
+                    <a class="nav" href="/adresses">All addresses</a>
+                </li>
+                <li class="nav">
+                    <a class="nav" href="/adresse">Search address</a>
+                </li>
+            </ul>
+        </nav>
+        <p th:text="'Bonjour ' + ${nomTemplate} + ' !'" />
+    </body>
+</html>

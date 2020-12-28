@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style th:replace="greeting.html :: style"></style>
+    </head>
+
+    <body>
+        <nav th:replace="greeting.html :: navigation"/>
+        <p th:text="'Bonjour ' + ${adresseSaisie} + ' !'" />
+        <p th:text="'Latitude : ' + ${latitude}" />
+        <p th:text="'Longitude ' + ${longitude}" />
+        <p th:text="'La météo est : ' + ${temps}" />
+        <p th:text="'Il fait : ' + ${temperature} + ' °C.'" />
+        <p th:text="'La vitesse du vent est : ' + ${speedWind} + ' m/s.'" />
+        <p th:text="'Le taux de nuage est de : ' + ${Cloudiness} + ' %.'" />
+    </body>
+
+</html>
